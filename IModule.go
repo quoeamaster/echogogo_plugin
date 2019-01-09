@@ -27,7 +27,7 @@ type IModule interface {
 
 	// method to perform the actual action for the module and return a model (interface{})
 	// for the final response rendering
-	DoAction(request http.Request, response http.Response) interface{}
+	DoAction(request http.Request, response http.Response, endPoint string, optionalMap ...map[string]interface{}) interface{}
 }
 
 
