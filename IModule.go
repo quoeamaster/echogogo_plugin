@@ -18,6 +18,8 @@
  */
 package echogogo
 
+import "net/http"
+
 // interface encapsulating the method(s) for a module running on echogogo server
 type IModule interface {
 	// method to return the config model for a REST api path / endPoint(s)
@@ -25,7 +27,7 @@ type IModule interface {
 
 	// method to perform the actual action for the module and return a model (interface{})
 	// for the final response rendering
-	DoAction(request interface{}) interface{}
+	DoAction(request http.Request, response http.Response) interface{}
 }
 
 
