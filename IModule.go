@@ -20,6 +20,12 @@ package echogogo
 
 import "net/http"
 
+/*
+ *	the usage of interface in echogogo has changed; since plugin could only pick up the
+ *  1st class level method implementations; having a 2nd class level (i.e. struct) would not work at all.
+ *
+ *	hence, interface would be used for internal data struct (composition instead of inheritance) in some ways
+ */
 // interface encapsulating the method(s) for a module running on echogogo server
 type IModule interface {
 	// method to return the config model for a REST api path / endPoint(s)
