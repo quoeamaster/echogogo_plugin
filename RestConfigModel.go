@@ -25,6 +25,10 @@ const FORMAT_XML 		= "xml"
 // format in xml OR json
 const FORMAT_XML_JSON 	= "xml,json"
 
+
+/**
+ *	since the plugin defect was discovered; this model is not useful anymore. Deprecated
+ */
 // Model encapsulating REST api configuration(s)
 type RestConfigModel struct {
 	// main path for the REST api service e.g. "/echo"
