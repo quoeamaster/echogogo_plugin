@@ -22,7 +22,7 @@ import "strings"
 
 // method to extract the "path-parameter" of the given url according to the given endpoint
 // e.g. url => /mock/getCityNameByZip AND endpoint => /mock -- path-parameter => /getCityNameByZip
-func extractPathParameterFromUrl(url string, endpoint string) string {
+func ExtractPathParameterFromUrl(url string, endpoint string) string {
 	methodName := ""
 
 	if idx := strings.Index(url, endpoint); idx != -1 {
